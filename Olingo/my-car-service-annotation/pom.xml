@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sample</groupId>
+	<artifactId>my-car-service-annotation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<packaging>war</packaging>
+
+	<properties>
+		<!-- Dependency Versions -->
+		<version.cxf>2.7.6</version.cxf>
+		<version.servlet-api>2.5</version.servlet-api>
+		<version.jaxrs-api>2.0-m10</version.jaxrs-api>
+		<version.olingo>2.0.0</version.olingo>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<defaultGoal>clean package</defaultGoal>
+	</build>
+
+	<dependencies>
+		<!-- Apache Olingo Library dependencies -->
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-api</artifactId>
+			<version>${version.olingo}</version>
+		</dependency>
+		<dependency>
+			<artifactId>olingo-odata2-api-annotation</artifactId>
+			<groupId>org.apache.olingo</groupId>
+			<type>jar</type>
+			<version>${version.olingo}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-core</artifactId>
+			<version>${version.olingo}</version>
+		</dependency>
+		<!-- Apache Olingo Annotation Processor Extension dependencies -->
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-annotation-processor-api</artifactId>
+			<version>${version.olingo}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-annotation-processor-core</artifactId>
+			<version>${version.olingo}</version>
+		</dependency>
+		<!-- Servlet/REST dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${version.servlet-api}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>${version.jaxrs-api}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>${version.cxf}</version>
+		</dependency>
+	</dependencies>
+
+
+</project>

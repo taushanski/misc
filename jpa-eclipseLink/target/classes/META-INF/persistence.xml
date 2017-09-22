@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="jpa-eclipseLink" transaction-type="RESOURCE_LOCAL">
+		<class>com.jpa.entity.Employee</class>
+		<class>com.jpa.entity.Staff</class>
+		<class>com.jpa.entity.TeachingStaff</class>
+		<class>com.jpa.entity.NonTeachingStaff</class>
+		<class>com.jpa.many_to_one.entity.Department</class>
+		<class>com.jpa.many_to_one.entity.Employee</class>
+		<class>com.jpa.one_to_many.entity.Department</class>
+		<class>com.jpa.one_to_many.entity.Employee</class>
+		<class>com.jpa.one_to_one.entity.Department</class>
+		<class>com.jpa.one_to_one.entity.Employee</class>
+		<class>com.jpa.many_to_many.entity.SchoolClass</class>
+		<class>com.jpa.many_to_many.entity.Teacher</class>
+		<class>com.jpa.javageek.table_generator.entity.Employee</class>
+		<class>com.jpa.javageek.many_to_one.entity.Employee</class>
+		<class>com.jpa.javageek.many_to_one.entity.Department</class>
+		<class>com.jpa.javageek.one_to_one.entity.Employee</class>
+		<class>com.jpa.javageek.one_to_one.entity.Desk</class>
+		<class>com.jpa.javageek.one_to_many.entity.Employee</class>
+		<class>com.jpa.javageek.one_to_many.entity.Department</class>
+		<class>com.jpa.javageek.many_to_many.entity.Employee</class>
+		<class>com.jpa.javageek.many_to_many.entity.Project</class>
+		<class>com.jpa.javageek.embeddable_and_attributeoverride.entity.Person</class>
+		<class>com.jpa.javageek.embeddable_and_attributeoverride.entity.Address</class>
+		<class>com.jpa.javageek.embeddable_and_attributeoverride.entity.Office</class>
+		<class>com.jpa.javageek.elementcollection.element.Course</class>
+		<class>com.jpa.javageek.elementcollection.element.Employee</class>
+		<class>com.jpa.javageek.secondaryTable.entity.Employee</class>
+		<class>com.jpa.javageek.mapkeycolumn.entity.Phone</class>
+		<class>com.jpa.javageek.mapkeycolumn.entity.Employee</class>
+		<class>com.jpa.javageek.ordercolumn.entity.Employee</class>
+		<class>com.jpa.javageek.mapsid.entity.Employee</class>
+		<class>com.jpa.javageek.mapsid.entity.DependentId</class>
+		<class>com.jpa.javageek.mapsid.entity.Dependent</class>
+		<class>com.jpa.javageek.idclass.entity.Employee</class>
+		<class>com.jpa.javageek.callbacks.entity.Employee</class>
+		<class>com.jpa.javageek.entitylisteners.entity.Employee</class>
+		<class>com.jpa.javageek.bean_validation.entity.Employee</class>
+
+
+		<validation-mode>CALLBACK</validation-mode>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=JPATest" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="abcd1234" />
+
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.create-ddl-jdbc-file-name" value="createDDL_ddlGeneration.jdbc" />
+			<property name="eclipselink.drop-ddl-jdbc-file-name" value="dropDDL_ddlGeneration.jdbc" />
+			<property name="eclipselink.ddl-generation.output-mode" value="both" />
+			<property name="eclipselink.logging.level" value="FINE" />
+		</properties>
+	</persistence-unit>
+</persistence>
