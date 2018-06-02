@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: cloud-native-development-scp-web Maven Webapp
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: i059884
+Implementation-Vendor-Id: open.sap.com
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_152
+Main-Class: ${start-class}
+
