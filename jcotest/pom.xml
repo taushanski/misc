@@ -15,7 +15,7 @@
             <version>3.0</version>
             <scope>system</scope>
             <systemPath>
-                /Users/i059884/Documents/Misc/JCo/MAC/sapjco3-darwinintel64-3.0.17/sapjco3.jar
+                /Users/i059884/Documents/first_iteration.Misc/JCo/MAC/sapjco3-darwinintel64-3.0.17/sapjco3.jar
             </systemPath>
         </dependency>
     </dependencies>
